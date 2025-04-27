@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 251, 235;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 30, 30, 46;
+    --background-end-rgb: 10, 10, 20;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 60 30% 98%;
+    --foreground: 240 10% 3.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 346 100% 93%;
+    --primary-foreground: 355 78% 30%;
+    
+    --secondary: 260 96% 85%;
+    --secondary-foreground: 240 60% 20%;
+    
+    --accent: 15 80% 90%;
+    --accent-foreground: 24 75% 35%;
+    
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346 100% 88%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 346 50% 60%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 260 40% 50%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --accent: 15 40% 50%;
+    --accent-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346 50% 55%;
+    
+    --success: 142 60% 30%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 38 60% 40%;
+    --warning-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .hero-title {
+    @apply font-bold text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight;
+  }
+  
+  .section-title {
+    @apply font-bold text-3xl sm:text-4xl leading-tight mb-6;
+  }
+  
+  .section-subtitle {
+    @apply font-medium text-xl text-muted-foreground mb-10 max-w-2xl mx-auto;
+  }
+  
+  .container-custom {
+    @apply px-4 sm:px-6 max-w-7xl mx-auto;
+  }
+  
+  .product-card {
+    @apply relative overflow-hidden rounded-lg bg-card transition-all duration-300 hover:shadow-md;
+  }
+  
+  .product-card-image {
+    @apply aspect-square w-full object-cover transition-transform duration-300;
+  }
+  
+  .product-card:hover .product-card-image {
+    @apply scale-105;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2;
+  }
+}
