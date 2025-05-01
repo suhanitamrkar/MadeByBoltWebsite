@@ -6,12 +6,12 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   experimental: {
-    fontLoaders: [
-      {
-        loader: '@next/font/google',
-        options: { timeout: 15000 },
-      },
-    ],
+    // fontLoaders: [
+    //   {
+    //     loader: '@next/font/google',
+    //     options: { timeout: 15000 },
+    //   },
+    // ],
   },
 };
 

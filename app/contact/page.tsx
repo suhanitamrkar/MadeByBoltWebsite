@@ -5,7 +5,7 @@ import { MapPin, Mail, Phone, MessageSquare } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { toast } from '@/components/ui/use-toast'
+
 import {
   Form,
   FormControl,
@@ -211,4 +211,8 @@ export default function ContactPage() {
       </section>
     </>
   )
+}
+
+function toast(arg0: { title: string; description: string }) {
+  throw new Error('Function not implemented.')
 }
